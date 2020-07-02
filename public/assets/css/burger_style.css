@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 180px;
+}
+
+h1 {
+    text-align: center;
+    color:darkred;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#burger {
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.column {
+     float: left;
+     width: 50%;
+}
+
+.row:after {
+     content: "";
+     display: table;
+     clear: both;
+}
+
+.add-burger {
+    margin: auto;
+    text-align: center;
+}
+
+#btn-submit {
+    color: white;
+    background-color: red;
+    height: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-devour {
+    background-color: red;
+    color: white;
+    float: right;
+    height: 25px;
+    margin-left: 5px;
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+}
+
+.burger-item {
+    background-color: white;
+    margin-bottom: 20px;
+    line-height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.toBeDevoured {
+    margin-right: 50px;
+}
+
+.devoured-burger {
+    background-color: green;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+ }

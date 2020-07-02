@@ -1,17 +1,34 @@
-const connection = require("../config/connection.js")
+const connection = require("../config/connection.js");
 
-//function for select a burger from mysql
-function selectBurger() {
+const orm = {
 
+    selectAll: async function(table, cb) {
+        let queryString = "SELECT * FROM ??";
+        let insert = table;
+
+        connection.query(queryString, insert, (err, result) => {
+            if(err) throw err;
+            cb(result);
+        });
+    },
+
+    insertOne: async function(table, columns, values, cb) {
+        let queryString = "INSERT INTO ?? (??) VALUES (?)";
+
+        connection.query(queryString, [table, columns, values], (err, result) => {
+            if(err) throw err;
+            cb(result);
+        });
+    },
+
+    updateOne: async function(table, columns, values, cb) {
+        let queryString = "UPDATE ?? SET ?? = 1 WHERE id = ?";
+
+        connection.query(queryString, [table, columns, values], (err, result) => {
+            if(err) throw err;
+            cb(result);
+        });
+    }
 };
 
-//function for inserting a burger into mysql
-function insertBurger() {
-
-};
-//function for updating a burger in mysql
-function updateBurger() {
-
-};
-
-//module.exports = this orm object
+module.exports = orm;

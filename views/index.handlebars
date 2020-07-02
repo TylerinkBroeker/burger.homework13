@@ -1,5 +1,33 @@
-
-
-
-
-{{!-- button to submit user input into the database --}}
+<body>
+    <div class = "row">
+        <div class = "column">
+            <div class = "toBeDevoured">
+                <h2>Burgers to be Devoured</h2>
+                <ul>
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                        <li class = "list-group-item burger-item">
+                            <span>{{id}}. {{burger_name}}</span> <button class = "btn-devour" id = "{{id}}">Devour!</button>
+                        </li>
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        
+        <div class = "column">
+            <div class = "devoured">
+                <h2>Burgers Devoured</h2>
+                <ul>
+                    {{#each burgers}}
+                        {{#if devoured}}
+                        <li class = "list-group-item devoured-burger">
+                            {{id}}. {{burger_name}}
+                        </li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
